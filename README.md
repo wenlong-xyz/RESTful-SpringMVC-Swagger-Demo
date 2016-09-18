@@ -8,6 +8,7 @@ SpringMVC框架搭建 RESTful 风格后端服务器示例
 - MySQL 数据库
 - Redis 数据库
 - Swagger-UI API接口管理工具
+
 ## Try it
 1. 导入项目到`IDEA/Eclipse`中
 2. 初始化数据库，导入`tools/mysql-init.sql`到MySQL数据库（本示例仅包含一张表，一条记录）
@@ -19,7 +20,9 @@ SpringMVC框架搭建 RESTful 风格后端服务器示例
 4. 修改`src/main/webapp/WEB-INF/swagger-ui/index.html`中的`url = "http://localhost:8888/api-docs";`为`url = "http://ip:port/{项目名}/api-docs";`
 5. 启动
 6. 浏览器中查看`http://ip:port/{项目名}/swagger/index.html`页面显示如下： ![image](https://github.com/ZongWenlong/Demos/blob/master/images/swagger/api-examples.PNG)
+
 # 具体说明：
+
 ## 请求响应过程
 - 登录：请求中携带用户名密码，获取Token, 为简单起见本示例只要用户名和密码相同则验证通过
     - Token
@@ -28,6 +31,7 @@ SpringMVC框架搭建 RESTful 风格后端服务器示例
 - 鉴权：除登录外的其他操作原则上均需要经过鉴权才能使用系统的API
     - 本示例中利用拦截器`src/java/pers/well/interceptor/AuthorizationInterceptor`拦截请求，进行Token正确性验证
     - `AuthorizationInterceptor` 在`src/main/resource/spring-mvc.xml`中配置
+
 ## 接口说明
 - 示例中有三个接口：/login, /student, token/student
 - /login
@@ -36,6 +40,7 @@ SpringMVC框架搭建 RESTful 风格后端服务器示例
     - 无token示例，提供简单的id参数即可进行查询
 - /token/student
     - 需要鉴权的接口示例，必须携带正确的token和username，否则鉴权失败
+
 ## 部分配置项说明
 - `src/main/resource/`目录：
     - database.properties: 数据库相关配置
@@ -61,8 +66,8 @@ SpringMVC框架搭建 RESTful 风格后端服务器示例
         - @ApiModelProperty
 
 主要参考：
-> [HelloWorld-MVC-Swagger](https://github.com/albertchendao/demos/tree/master/java/spring/HelloWorld-MVC-Swagger)
-> [Swagger: make developers love working with your REST API](https://www.javacodegeeks.com/2013/10/swagger-make-developers-love-working-with-your-rest-api.html)
+> 1. [HelloWorld-MVC-Swagger](https://github.com/albertchendao/demos/tree/master/java/spring/HelloWorld-MVC-Swagger)
+> 2. [Swagger: make developers love working with your REST API](https://www.javacodegeeks.com/2013/10/swagger-make-developers-love-working-with-your-rest-api.html)
           	
 
 ## 其他说明：
