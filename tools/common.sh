@@ -1,0 +1,1 @@
+java -jar F:\\.m2\\repository\\org\\mybatis\\generator\\mybatis-generator-core\\1.3.0\\mybatis-generator-core-1.3.0.jar -configfile E:\workspaces\Demos\RESTful-Spring-Swagger-Demo\src\main\resources\MyBatisGeneratorConfig.xml -overwrite
