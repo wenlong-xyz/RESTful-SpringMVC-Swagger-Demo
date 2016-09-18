@@ -1,4 +1,4 @@
-# RESTful-Spring-Swagger-Demo
+# RESTful-SpringMVC-Swagger-Demo
 SpringMVC框架搭建 RESTful 风格后端服务器示例
 ## 涉及框架或数据库
 - SpringMVC 框架
